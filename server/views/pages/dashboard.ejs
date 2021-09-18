@@ -1,240 +1,112 @@
 <!-- Sortable, searchable, responsive datatable with pagination -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dashboard | Glytch</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-            crossorigin="anonymous"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Glytch</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <!--DataTables-->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
-        <link rel="stylesheet" type="text/css" href="/styles/dashboard.css" />
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
-        <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-            }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--DataTables-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/dashboard.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark h-100 min-vh-100" style="width: 280px">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
-                    <span class="fs-4">Glytch</span>
-                </a>
-                <hr />
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">
-                            <i class="fas fa-table"></i>&nbsp;&nbsp; Table
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link text-white">
-                            <i class="fas fa-chart-line"></i>&nbsp;&nbsp; Analytics
-                        </a>
-                    </li>
-                </ul>
-                <hr />
-                <div class="dropdown">
-                    <a
-                        href="#"
-                        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle dropup"
-                        id="dropdownUser1"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <img
-                            src="https://github.com/mdo.png"
-                            alt=""
-                            width="32"
-                            height="32"
-                            class="rounded-circle me-2"
-                        />
-                        <strong>mdo</strong>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark h-100 min-vh-100" style="width: 280px">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+          <span class="fs-4">Glytch</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page"> <i class="fas fa-table"></i>&nbsp;&nbsp; Table </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white"> <i class="fas fa-chart-line"></i>&nbsp;&nbsp; Analytics </a>
+          </li>
+        </ul>
+        <hr />
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle dropup" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
+            <strong>mdo</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="b-example-divider"></div>
-            <!-- TABLE CONTAINER -->
-            <div class="table-container">
-                <!-- TABLE 1 -->
-                <div class="container">
-                    <table id="dataTable" class="table display">
-                        <thead>
-                            <tr>
-                                <th>Destination</th>
-                                <th>Hotel</th>
-                                <th>Arrival Date</th>
-                                <th>Departure Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Boston, MA</td>
-                                <td>The Liberty</td>
-                                <td>10/29/1996</td>
-                                <td>11/8/1996</td>
-                            </tr>
-                            <tr>
-                                <td>New York, NY</td>
-                                <td>Park Central</td>
-                                <td>11/8/1996</td>
-                                <td>11/17/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Philadelphia, PA</td>
-                                <td>The Ritz-Carlton</td>
-                                <td>11/17/1996</td>
-                                <td>11/19/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Baltimore, MD</td>
-                                <td>Four Seasons</td>
-                                <td>11/19/1996</td>
-                                <td>11/21/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Washington, DC</td>
-                                <td>InterContinental the Willard</td>
-                                <td>11/30/1996</td>
-                                <td>12/8/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Williamsburg, VA</td>
-                                <td>Williamsburg Inn</td>
-                                <td>12/8/1996</td>
-                                <td>12/10/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Wilmington, NC</td>
-                                <td>Hotel Ballast</td>
-                                <td>12/10/1996</td>
-                                <td>12/13/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Atlanta, GA</td>
-                                <td>The St. Regis</td>
-                                <td>12/14/1996</td>
-                                <td>12/16/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Savannah, GA</td>
-                                <td>The Bohemian</td>
-                                <td>12/16/1996</td>
-                                <td>12/18/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Orlando, FL</td>
-                                <td>Castle Hotel</td>
-                                <td>12/29/1996</td>
-                                <td>1/10/1997</td>
-                            </tr>
-                            <tr>
-                                <td>New Orleans, LA</td>
-                                <td>The Roosevelt</td>
-                                <td>1/10/1997</td>
-                                <td>1/14/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Austin, TX</td>
-                                <td>Omni</td>
-                                <td>1/15/1997</td>
-                                <td>1/17/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Las Vegas, NV</td>
-                                <td>Bellagio</td>
-                                <td>1/17/1997</td>
-                                <td>1/24/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Los Angeles, CA</td>
-                                <td>Bevery Hills Hotel</td>
-                                <td>1/25/1997</td>
-                                <td>1/31/1997</td>
-                            </tr>
-                            <tr>
-                                <td>San Francisco, CA</td>
-                                <td>Hotel Fairmont</td>
-                                <td>2/1/1997</td>
-                                <td>2/7/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Portland, OR</td>
-                                <td>Jupiter Hotel</td>
-                                <td>2/7/1997</td>
-                                <td>2/11/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Seattle, WA</td>
-                                <td>Loews Hotel 1000</td>
-                                <td>2/12/1997</td>
-                                <td>3/20/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Chicago, IL</td>
-                                <td>Hotel EMC2</td>
-                                <td>3/21/1997</td>
-                                <td>3/31/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Anchorage, AK</td>
-                                <td>Sheraton Anchorage</td>
-                                <td>4/1/1997</td>
-                                <td>4/10/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Lanai City, HI</td>
-                                <td>Four Seasons Resort</td>
-                                <td>4/11/1997</td>
-                                <td>4/18/1997</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <br />
-            </div>
-            <!-- /TABLE CONTAINER -->
-            <br />
-            <br />
+      <div class="b-example-divider"></div>
+      <!-- TABLE CONTAINER -->
+      <div class="table-container">
+        <!-- TABLE 1 -->
+        <div class="container">
+          <table id="dataTable" class="table display">
+            <thead>
+              <tr>
+                <th>Reviews</th>
+                <th>Label</th>
+                <th>Arrival Date</th>
+                <th>Departure Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% reviews_data.map((review_row) => {%>
+              <tr>
+                <td><%= review_row.review %> </td>
+                <td><%= review_row.label %></td>
+                <td>10/29/1996</td>
+                <td>11/8/1996</td>
+              </tr>
+              <%} ) %>
+            </tbody>
+          </table>
+        </div>
+        <br />
+      </div>
+      <!-- /TABLE CONTAINER -->
+      <br />
+      <br />
 
-            <script src="/js/dashboard.js"></script>
-        </main>
-    </body>
+      <script src="/js/dashboard.js"></script>
+    </main>
+  </body>
 </html>

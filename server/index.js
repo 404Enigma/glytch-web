@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(require("./src/routes/index"));
-// app.use(require("./src/seeds/index"));
+//app.use(require("./src/seeds/index"));
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
