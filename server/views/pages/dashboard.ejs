@@ -101,133 +101,21 @@
                     <table id="dataTable" class="table display">
                         <thead>
                             <tr>
-                                <th>Destination</th>
-                                <th>Hotel</th>
+                                <th>Reviews</th>
+                                <th>Label</th>
                                 <th>Arrival Date</th>
                                 <th>Departure Date</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <% reviews_data.map((review_row) => {%>
                             <tr>
-                                <td>Boston, MA</td>
-                                <td>The Liberty</td>
+                                <td><%= review_row.review %> </td>
+                                <td><%= review_row.label %></td>
                                 <td>10/29/1996</td>
                                 <td>11/8/1996</td>
                             </tr>
-                            <tr>
-                                <td>New York, NY</td>
-                                <td>Park Central</td>
-                                <td>11/8/1996</td>
-                                <td>11/17/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Philadelphia, PA</td>
-                                <td>The Ritz-Carlton</td>
-                                <td>11/17/1996</td>
-                                <td>11/19/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Baltimore, MD</td>
-                                <td>Four Seasons</td>
-                                <td>11/19/1996</td>
-                                <td>11/21/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Washington, DC</td>
-                                <td>InterContinental the Willard</td>
-                                <td>11/30/1996</td>
-                                <td>12/8/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Williamsburg, VA</td>
-                                <td>Williamsburg Inn</td>
-                                <td>12/8/1996</td>
-                                <td>12/10/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Wilmington, NC</td>
-                                <td>Hotel Ballast</td>
-                                <td>12/10/1996</td>
-                                <td>12/13/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Atlanta, GA</td>
-                                <td>The St. Regis</td>
-                                <td>12/14/1996</td>
-                                <td>12/16/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Savannah, GA</td>
-                                <td>The Bohemian</td>
-                                <td>12/16/1996</td>
-                                <td>12/18/1996</td>
-                            </tr>
-                            <tr>
-                                <td>Orlando, FL</td>
-                                <td>Castle Hotel</td>
-                                <td>12/29/1996</td>
-                                <td>1/10/1997</td>
-                            </tr>
-                            <tr>
-                                <td>New Orleans, LA</td>
-                                <td>The Roosevelt</td>
-                                <td>1/10/1997</td>
-                                <td>1/14/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Austin, TX</td>
-                                <td>Omni</td>
-                                <td>1/15/1997</td>
-                                <td>1/17/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Las Vegas, NV</td>
-                                <td>Bellagio</td>
-                                <td>1/17/1997</td>
-                                <td>1/24/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Los Angeles, CA</td>
-                                <td>Bevery Hills Hotel</td>
-                                <td>1/25/1997</td>
-                                <td>1/31/1997</td>
-                            </tr>
-                            <tr>
-                                <td>San Francisco, CA</td>
-                                <td>Hotel Fairmont</td>
-                                <td>2/1/1997</td>
-                                <td>2/7/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Portland, OR</td>
-                                <td>Jupiter Hotel</td>
-                                <td>2/7/1997</td>
-                                <td>2/11/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Seattle, WA</td>
-                                <td>Loews Hotel 1000</td>
-                                <td>2/12/1997</td>
-                                <td>3/20/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Chicago, IL</td>
-                                <td>Hotel EMC2</td>
-                                <td>3/21/1997</td>
-                                <td>3/31/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Anchorage, AK</td>
-                                <td>Sheraton Anchorage</td>
-                                <td>4/1/1997</td>
-                                <td>4/10/1997</td>
-                            </tr>
-                            <tr>
-                                <td>Lanai City, HI</td>
-                                <td>Four Seasons Resort</td>
-                                <td>4/11/1997</td>
-                                <td>4/18/1997</td>
-                            </tr>
+                            <%} ) %>
                         </tbody>
                     </table>
                 </div>

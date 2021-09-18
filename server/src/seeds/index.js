@@ -13,4 +13,4 @@ data.forEach(async function (obj) {
   await add_data(obj);
 });
 
-// module.exports = add_data;
+//module.exports = add_data;
