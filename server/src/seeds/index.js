@@ -5,7 +5,7 @@ const data = require("./reviews.json");
 const add_data = async (data) => {
   const review_Ref = db.collection("Reviews");
   const res = await review_Ref.doc().set(data);
-  console.log(res);
+  //console.log(res);
 };
 
 data.forEach(async function (obj) {
