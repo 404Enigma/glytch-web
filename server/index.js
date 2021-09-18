@@ -18,10 +18,10 @@ app.use(cookieParser());
 
 // set up session cookies
 app.use(
-    cookieSession({
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        keys: [keys.session.cookieKey],
-    })
+  cookieSession({
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    keys: [keys.session.cookieKey],
+  })
 );
 
 // initialize passport
@@ -29,7 +29,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(require("./src/routes/index"));
+// app.use(require("./src/seeds/index"));
 
 app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+  console.log(`Listening on port ${PORT}`);
 });
