@@ -1,14 +1,167 @@
+<!-- Sortable, searchable, responsive datatable with pagination -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | Glytch</title>
-  </head>
-  <body>
-    <h1><%= user.name %> </h1>
-    <h3><%= user.email %> </h3>
-    <img src="<%= user.thumbnail %>" alt="" srcset="" />
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+            crossorigin="anonymous"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <!--DataTables-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/dashboard.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    </head>
+    <!-- TABLE CONTAINER -->
+    <div class="table-container">
+        <!-- TABLE 1 -->
+        <div class="container">
+            <table id="dataTable" class="table table-striped table-bordered table-hover display">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Hotel</th>
+                        <th>Arrival Date</th>
+                        <th>Departure Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Boston, MA</td>
+                        <td>The Liberty</td>
+                        <td>10/29/1996</td>
+                        <td>11/8/1996</td>
+                    </tr>
+                    <tr>
+                        <td>New York, NY</td>
+                        <td>Park Central</td>
+                        <td>11/8/1996</td>
+                        <td>11/17/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Philadelphia, PA</td>
+                        <td>The Ritz-Carlton</td>
+                        <td>11/17/1996</td>
+                        <td>11/19/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore, MD</td>
+                        <td>Four Seasons</td>
+                        <td>11/19/1996</td>
+                        <td>11/21/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Washington, DC</td>
+                        <td>InterContinental the Willard</td>
+                        <td>11/30/1996</td>
+                        <td>12/8/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Williamsburg, VA</td>
+                        <td>Williamsburg Inn</td>
+                        <td>12/8/1996</td>
+                        <td>12/10/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Wilmington, NC</td>
+                        <td>Hotel Ballast</td>
+                        <td>12/10/1996</td>
+                        <td>12/13/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Atlanta, GA</td>
+                        <td>The St. Regis</td>
+                        <td>12/14/1996</td>
+                        <td>12/16/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Savannah, GA</td>
+                        <td>The Bohemian</td>
+                        <td>12/16/1996</td>
+                        <td>12/18/1996</td>
+                    </tr>
+                    <tr>
+                        <td>Orlando, FL</td>
+                        <td>Castle Hotel</td>
+                        <td>12/29/1996</td>
+                        <td>1/10/1997</td>
+                    </tr>
+                    <tr>
+                        <td>New Orleans, LA</td>
+                        <td>The Roosevelt</td>
+                        <td>1/10/1997</td>
+                        <td>1/14/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Austin, TX</td>
+                        <td>Omni</td>
+                        <td>1/15/1997</td>
+                        <td>1/17/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Las Vegas, NV</td>
+                        <td>Bellagio</td>
+                        <td>1/17/1997</td>
+                        <td>1/24/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Los Angeles, CA</td>
+                        <td>Bevery Hills Hotel</td>
+                        <td>1/25/1997</td>
+                        <td>1/31/1997</td>
+                    </tr>
+                    <tr>
+                        <td>San Francisco, CA</td>
+                        <td>Hotel Fairmont</td>
+                        <td>2/1/1997</td>
+                        <td>2/7/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Portland, OR</td>
+                        <td>Jupiter Hotel</td>
+                        <td>2/7/1997</td>
+                        <td>2/11/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Seattle, WA</td>
+                        <td>Loews Hotel 1000</td>
+                        <td>2/12/1997</td>
+                        <td>3/20/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Chicago, IL</td>
+                        <td>Hotel EMC2</td>
+                        <td>3/21/1997</td>
+                        <td>3/31/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Anchorage, AK</td>
+                        <td>Sheraton Anchorage</td>
+                        <td>4/1/1997</td>
+                        <td>4/10/1997</td>
+                    </tr>
+                    <tr>
+                        <td>Lanai City, HI</td>
+                        <td>Four Seasons Resort</td>
+                        <td>4/11/1997</td>
+                        <td>4/18/1997</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+    </div>
+    <!-- /TABLE CONTAINER -->
+    <br />
+    <br />
+    <script src="/js/dashboard.js"></script>
 </html>
