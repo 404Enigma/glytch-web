@@ -105,19 +105,23 @@ div.container {
 .table-container {
     width: 100%;
 }
-table {
-    border-radius: 20px;
-}
+
 thead {
     background: rgb(73, 39, 74);
     color: #fff;
-    border: 2px solid white;
-    border-radius: 20px;
-    margin: 20px;
 }
 
 table#dataTable {
-    border-bottom: none !important;
+    border: 4px solid black;
+    border-radius: 10px;
+    /* border-bottom: none !important; */
+}
+tr,
+td {
+    border: none;
+}
+label {
+    margin-bottom: 10px;
 }
 
 /* WHITE SORTING ARROWS */
