@@ -35,6 +35,13 @@ router.get("/feedback", async (req, res) => {
 
 router.post("/feedback_string", async (req, res) => {
   const feedback_obj = req.body;
+
+  const res_data = await axios.post(process.env.Feedback_API_URL, {
+    text: feedback_obj.feedback,
+  });
+  const data = res_data.data;
+  feedback_obj.sentiment = data.score;
+
   await add_feedback(feedback_obj);
   res.send("success");
 });
