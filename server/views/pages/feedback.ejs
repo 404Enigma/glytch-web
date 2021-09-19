@@ -94,9 +94,9 @@
                             <span></span>
                         </button>
                     </div>
-                    <div class="btn-group">
+                    <div class="btn-group justify-content-end">
                         <img
-                            src=""
+                            src="<%= user.thumbnail %>  "
                             alt="Pic"
                             class="rounded-circle w-50 h-50"
                             id="dropdownMenuButton"
@@ -106,11 +106,13 @@
                             aria-expanded="false"
                         />
                         <div class="dropdown-menu dropdown-menu-end mt-2" aria-labelledby="dropdownMenuButton">
-                            <h6 class="dropdown-header"></h6>
-                            <p class="dropdown-header"></p>
+                            <h6 class="dropdown-header"><%= user.name %></h6>
+                            <p class="dropdown-header"><%= user.email %></p>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/"><i class="fas fa-home"></i>&nbsp; Home</a>
-                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout</a>
+                            <a class="dropdown-item" href="/auth/logout">
+                                <i class="fas fa-sign-out-alt"></i>&nbsp; Logout
+                            </a>
                         </div>
                     </div>
                 </nav>
@@ -187,6 +189,12 @@
             </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+            integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+            crossorigin="anonymous"
+        ></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#sidebarCollapse").on("click", function () {
@@ -194,47 +202,33 @@
                 });
             });
         </script>
-        <script src="/js/dashboard.js"></script>
+
         <script>
             const review_form = document.getElementById("review_form");
-
             if (typeof review_form != "undefined" && review_form != null) {
-              // Exists.
-              review_form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
-        </script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-            integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-            crossorigin="anonymous"
-        ></script>
-
-        <script type="text/javascript">
-                  $(document).ready(function () {
-                      $("#sidebarCollapse").on("click", function () {
-                          $("#sidebar").toggleClass("active");
-                      });
-                const formData = new FormData(e.target);
-                const data = Object.fromEntries(formData.entries());
-                console.log({ data });
-                // document.getElementById("modal__content").innerHTML = "Task Added!";
-                // $("#liveToast").toast("show");
-                axios({
-                  method: "post",
-                  url: "/feedback_string",
-                  data,
-                })
-                  .then(function (response) {
-                    console.log(response);
-                    location.reload();
-                  })
-                  .catch(function (error) {
-                    console.log(error);
-                  });
-              });
+                // Exists.
+                review_form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.target);
+                    const data = Object.fromEntries(formData.entries());
+                    console.log({ data });
+                    // document.getElementById("modal__content").innerHTML = "Task Added!";
+                    // $("#liveToast").toast("show");
+                    axios({
+                        method: "post",
+                        url: "/feedback_string",
+                        data,
+                    })
+                        .then(function (response) {
+                            console.log(response);
+                            location.reload();
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                });
             }
         </script>
+        <script src="/js/dashboard.js"></script>
     </body>
 </html>
