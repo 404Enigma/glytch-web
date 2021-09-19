@@ -21,7 +21,7 @@ router.get(
 // hand control to passport to use code to grab profile info
 router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
   // res.send(req.user);
-  res.redirect("/dashboard");
+  res.redirect("/feedback");
 });
 
 // auth logout
