@@ -313,3 +313,26 @@ table.dataTable thead .sorting_asc {
 table.dataTable thead .sorting_desc {
     background-image: url("images/sort_both.png") !important;
 }
+
+/* ---------------------------------------------------
+    FEEDBACK
+----------------------------------------------------- */
+.card {
+    width: 80%;
+    background: #42275a; /* fallback for old browsers */
+    box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, 0.2);
+    color: #fff;
+    border: 2px solid #7a55a5;
+}
+.card h4 {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    div.container {
+        padding: 30px 0;
+    }
+    .card {
+        width: 100%;
+    }
+}
