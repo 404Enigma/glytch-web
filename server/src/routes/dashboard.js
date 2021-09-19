@@ -20,6 +20,16 @@ router.get("/dashboard", async (req, res) => {
   res.render("pages/dashboard", { user, reviews_data });
 });
 
+router.get("/feedback", (req, res) => {
+  console.log("feedback");
+
+  if (!req.user) {
+    return res.redirect("/auth/login");
+  }
+
+  res.render("pages/feedback");
+});
+
 router.post("/getCategory", async (req, res) => {
   const { text } = req.body;
 
