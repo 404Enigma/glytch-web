@@ -81,40 +81,31 @@
 
             <!-- Page Content  -->
             <div id="content">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
-                    <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 d-flex justify-content-between">
+                    <div class="my-0 py-0">
                         <button type="button" id="sidebarCollapse" class="btn btn-toggle">
                             <i class="fas fa-align-left"></i>
                             <span></span>
                         </button>
-                        <!-- <button
-                            class="btn btn-dark d-inline-block d-lg-none ml-auto"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
+                    </div>
+                    <div class="btn-group">
+                        <img
+                            src=""
+                            alt="Pic"
+                            class="rounded-circle w-50 h-50"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
                             aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <i class="fas fa-align-justify"></i>
-                        </button> -->
-
-                        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Page</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Page</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Page</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Page</a>
-                                </li>
-                            </ul>
-                        </div> -->
+                        />
+                        <div class="dropdown-menu dropdown-menu-end mt-2" aria-labelledby="dropdownMenuButton">
+                            <h6 class="dropdown-header"></h6>
+                            <p class="dropdown-header"></p>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/"><i class="fas fa-home"></i>&nbsp; Home</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout</a>
+                        </div>
                     </div>
                 </nav>
 
@@ -169,6 +160,13 @@
                 <br />
             </div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+            integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+            crossorigin="anonymous"
+        ></script>
 
         <script type="text/javascript">
             $(document).ready(function () {
