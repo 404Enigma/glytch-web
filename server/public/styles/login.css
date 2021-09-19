@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/background.jpg");
+}
+.card-title {
+    text-align: center;
+}
+.card-title a {
+    font-weight: 600;
+    color: #000000;
+}
+.card-signin {
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.card-signin .card-img-left {
+    width: 100%;
+    background: scroll center url("../images/login.gif");
+}
+.card-signin .card-body {
+    padding: 2rem;
+    height: 60vh;
+    width: 100%;
+}
+.form-signin {
+    width: 100%;
+}
+.form-signin .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+}
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-label-group input {
+    height: auto;
+    border-radius: 2rem;
+}
+.form-label-group > input,
+.form-label-group > label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+}
+.form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: all 0.1s ease-in-out;
+}
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+.form-label-group input::placeholder {
+    color: transparent;
+}
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+}
+.form-label-group input:not(:placeholder-shown) ~ label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+}
+.btn-google {
+    color: white;
+    background-color: #ea4335;
+    margin-top: 100px;
+}
+.btn-facebook {
+    color: white;
+    background-color: #3b5998;
+}
+.login-text {
+    font-size: 1.5rem;
+}
+.privacy-heading {
+    font-size: smaller;
+    text-align: center;
+}
+.privacy-heading a {
+    color: orangered;
+}
+.google-btn {
+    /* border: 2px solid rgb(63, 61, 61); */
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #1a1919, #383636);
+    box-shadow: 0px 4px 30px rgba(77, 67, 68, 0.575);
+    color: #fff;
+    border-radius: 10px;
+    width: 240px;
+    text-align: center;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.google-btn:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 991px) {
+    .login-text {
+        font-size: 1.3rem;
+    }
+}
