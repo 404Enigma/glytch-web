@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require("axios");
 require("dotenv").config();
 
-const { getReviews, add_feedback, getFeedbacks } = require("../services/reviews");
+const { getReviews, add_feedback, getFeedbacks, updateAnalytics, get_Analytics } = require("../services/reviews");
 
 router.get("/dashboard", async (req, res) => {
   if (!req.user) {
@@ -11,13 +11,14 @@ router.get("/dashboard", async (req, res) => {
   }
 
   const reviews_data = await getReviews();
+  const analytics_data = await get_Analytics();
 
   //   reviews_data.map((review) => {
   //     console.log(review);
   //   });
 
   const user = req.user;
-  res.render("pages/dashboard", { user, reviews_data });
+  res.render("pages/dashboard", { user, reviews_data, analytics_data });
 });
 
 router.get("/feedback", async (req, res) => {
@@ -43,6 +44,7 @@ router.post("/feedback_string", async (req, res) => {
   feedback_obj.sentiment = data.score;
 
   await add_feedback(feedback_obj);
+  await updateAnalytics(feedback_obj.sentiment);
   res.send("success");
 });
 
