@@ -1,11 +1,22 @@
 <div align="center">
+<img src="https://github.com/404Enigma/nanogiants-hackathon-2021/blob/master/Extra/glytch.png">
 <h1>Glytch</h1>
 <h4>Nanogiants Hackathon</h4>
 </div>
 &nbsp;
 &nbsp;
+
+> # The Outcome!!
+>
+> ## 🏆 Secured 1st position.
+
+&nbsp;
 <h2>Website Link</h2>
 <a href="https://nanogiants.herokuapp.com/">Click Here</a>
+&nbsp;
+&nbsp;
+<h2>Android App</h2>
+<a href="https://github.com/404Enigma/nanogiants-hackathon-2021/blob/master/Extra/Glytch.apk">Click Here</a>
 &nbsp;
 &nbsp;
 <div>
@@ -39,6 +50,7 @@ Integrating a model into a website or an app was a bit difficult for the team. H
 <div>
 <h2>Technologies We Used</h2>
 <ul>
+<li>Java</li>  
 <li>JavaScript</li>
 <li>Node.js</li>
 <li>HTML5</li>
@@ -69,6 +81,10 @@ Integrating a model into a website or an app was a bit difficult for the team. H
 &nbsp;
 <h2>Video Link</h2>
 <a href="https://youtu.be/Bc9ZwEVkrKM" target="_blank">Click Here</a>
+&nbsp;
+&nbsp;
+<h2>Screenshots Link</h2>
+<a href="https://drive.google.com/drive/folders/1et4KgB6W8bUGZGY8Lc4QqXLf_q7_rG6V?usp=sharing">Click Here</a>
 &nbsp;
 &nbsp;
 <h2>Checkout our API</h2>
