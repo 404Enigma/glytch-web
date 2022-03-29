@@ -22,7 +22,7 @@
 <div>
 &nbsp;
 <h2>Tagline</h2>
-<p>A tool to measure the frequency and impact of problems for your product, based on user feedback. It separates them into various segments.</p>
+<p>Glytch is a web platform and an android app in which a tool is embedded to measure the frequency and impact of problems for your product, based on user feedback. It separates them into various segments.</p>
 </div>
 &nbsp;
 &nbsp;
